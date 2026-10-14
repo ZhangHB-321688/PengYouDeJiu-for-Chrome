@@ -1,0 +1,14 @@
+/* PengYouDeJiu - 注入到页面的样式 */
+
+.pyj-highlight {
+  outline: 2px solid #2563eb !important;
+  outline-offset: 1px !important;
+  background-color: rgba(37, 99, 235, 0.12) !important;
+  border-radius: 2px !important;
+}
+
+.pyj-hidden {
+  display: none !important;
+}
+
+/* 尺寸变换的具体规则由 content.js 按元素层数动态注入（见 ensureStyle） */

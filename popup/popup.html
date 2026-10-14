@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>朋友的酒</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">朋友的酒</h1>
+    <label class="switch" title="启用 / 停用插件">
+      <input type="checkbox" id="enabled" />
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <main class="content">
+    <p class="status" id="status">正在读取当前页面…</p>
+
+    <div class="field">
+      <label class="field-label" for="scaleAmount">缩放强度</label>
+      <input class="field-input" type="number" id="scaleAmount" step="any" value="0.1" />
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="toggleScale">开始尺寸变换</button>
+    </div>
+
+    <div class="actions audio-actions">
+      <button class="btn" id="toggleAudio">播放音乐</button>
+      <button class="btn btn-ghost" id="pauseAudio">暂停音乐</button>
+    </div>
+  </main>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

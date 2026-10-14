@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "《 朋 友 的 酒 》",
+  "version": "1.0.0",
+  "description": "昨↓↑↓↑日↓↑↓↑一↓↑去↓↑不↓↑复↓↑回↓↑~~~哦耶耶~开↓↑↓↑心↓↑↓↑比↓↑什↓↑么↓↑都↓↑贵↓↑~~~",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "PengYouDeJiu",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/scale.js", "content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting", "offscreen"],
+  "host_permissions": ["<all_urls>"]
+}
