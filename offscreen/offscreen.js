@@ -5,7 +5,7 @@
  * 同时向外提供播放进度，供内容脚本驱动缩放效果。
  */
 
-const AUDIO_URL = chrome.runtime.getURL("audio/friends-wine.mp3");
+const AUDIO_URL = chrome.runtime.getURL("audio/audio.mp3");
 
 /** @type {HTMLAudioElement | null} */
 let audio = null;
